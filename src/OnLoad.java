@@ -1,8 +1,11 @@
+import java.io.EOFException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class OnLoad {
@@ -68,10 +71,21 @@ public class OnLoad {
 
         switch (response){
             case 1:
-                System.out.println("You chose 1");
+                System.out.println("Name | Phone number");
+                System.out.println("---------------");
+                try {
+                    List<String> contactList = Files.readAllLines(dataFile);
+                    for (String contact : contactList) {
+                        System.out.println(contact);
+                    }
+
+                }catch (Exception e){
+                    System.out.println("this isnt working");
+                    e.fillInStackTrace();
+                }
                 break;
             case 2 :
-                System.out.println("You chose 2");
+                    AddContact.addContacts();
                 break;
             case 3 :
                 System.out.println("You chose 3");

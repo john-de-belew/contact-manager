@@ -68,6 +68,28 @@ dedicated-photon
         return name + " the " + adj + "-" + noun;
     };
 
+    public static String nickNameGenerator(){
+        int adjNickCounts = adjectives.length;
+        //System.out.println(adjCount);
+        // System.out.println(nameCount);
+        int nounNickCounts = nouns.length;
+        // System.out.println(nounCount);
+
+        String adjNick;
+        String nounNick;
+        // for (int i=0; i< num ; i++){
+        int rando = (int) (Math.random()*adjNickCounts);
+        adjNick = adjectives[rando];
+        rando = (int) (Math.random()*nounNickCounts);
+        nounNick = nouns[rando];
+
+
+        String genName =  " the " + adjNick + "-" + nounNick;
+//        System.out.println(genName);
+        // }
+        return genName;
+    }
+
 }
 
 
