@@ -46,16 +46,12 @@ dedicated-photon
     };
     public static String nameGenerator(){
         int adjCount = adjectives.length;
-        //System.out.println(adjCount);
         int nameCount = names.length;
-        // System.out.println(nameCount);
         int nounCount = nouns.length;
-        // System.out.println(nounCount);
 
         String adj;
         String noun;
         String name;
-        // for (int i=0; i< num ; i++){
         int rando = (int) (Math.random()*adjCount);
         adj = adjectives[rando];
         rando = (int) (Math.random()*nounCount);
@@ -63,21 +59,15 @@ dedicated-photon
         rando = (int) (Math.random()*nameCount);
         name = names[rando];
         String genName = "You shall now and forever be known as: "+ name + " the " + adj + "-" + noun;
-//        System.out.println(genName);
-        // }
         return name + " the " + adj + "-" + noun;
     };
 
     public static String nickNameGenerator(){
         int adjNickCounts = adjectives.length;
-        //System.out.println(adjCount);
-        // System.out.println(nameCount);
         int nounNickCounts = nouns.length;
-        // System.out.println(nounCount);
 
         String adjNick;
         String nounNick;
-        // for (int i=0; i< num ; i++){
         int rando = (int) (Math.random()*adjNickCounts);
         adjNick = adjectives[rando];
         rando = (int) (Math.random()*nounNickCounts);
@@ -85,8 +75,6 @@ dedicated-photon
 
 
         String genName =  " the " + adjNick + "-" + nounNick;
-//        System.out.println(genName);
-        // }
         return genName;
     }
 
