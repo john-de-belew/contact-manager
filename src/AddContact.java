@@ -27,7 +27,8 @@ public class AddContact {
         }
 
         try {
-            Files.write(dataFile, Arrays.asList(contactName + nickName + "|" + contactNumber), StandardOpenOption.APPEND);
+            Files.write(dataFile, Arrays.asList(contactName + nickName + " | " + contactNumber),
+                    StandardOpenOption.APPEND);
         }catch (Exception e){
             e.fillInStackTrace();
         }

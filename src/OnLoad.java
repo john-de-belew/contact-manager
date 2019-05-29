@@ -35,7 +35,7 @@ public class OnLoad {
                 e.printStackTrace();
             }
 
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < 20; i++) {
 
                 String name = NameGenerator.nameGenerator();
                 long number = (long) (Math.random()*10000000000L);
@@ -83,18 +83,23 @@ public class OnLoad {
                     System.out.println("this isnt working");
                     e.fillInStackTrace();
                 }
+                OnLoad.onLoad();
                 break;
             case 2 :
                     AddContact.addContacts();
+                OnLoad.onLoad();
                 break;
             case 3 :
-                System.out.println("You chose 3");
+                SearchContacts.searchContacts();
+                OnLoad.onLoad();
                 break;
             case 4 :
-                System.out.println("You chose 4");
+                DeleteContact.deleteContact();
+                OnLoad.onLoad();
                 break;
             case 5 :
                 System.out.println("You chose 5");
+                System.out.println("Bye.");
                 break;
                 default:
                     System.out.println("Something went terribly wrong.");
