@@ -27,7 +27,12 @@ public class AddContact {
         }
 
         try {
-            Files.write(dataFile, Arrays.asList(contactName + nickName + " | " + contactNumber),
+
+            String formatContact = String.format("%s%-24s |%-28s", contactName, nickName,
+                    contactNumber);
+            System.out.println(formatContact);
+            Files.write(dataFile,
+                    Arrays.asList( formatContact),
                     StandardOpenOption.APPEND);
         }catch (Exception e){
             e.fillInStackTrace();

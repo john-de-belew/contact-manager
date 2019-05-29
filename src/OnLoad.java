@@ -39,7 +39,8 @@ public class OnLoad {
 
                 String name = NameGenerator.nameGenerator();
                 long number = (long) (Math.random()*10000000000L);
-                contacts.add(name+" | " + number);
+                String nConcat = String.format("%-28s |%-28s", name, number);
+                contacts.add(nConcat);
             }
 
             System.out.println(contacts);
@@ -71,8 +72,8 @@ public class OnLoad {
 
         switch (response){
             case 1:
-                System.out.println("Name | Phone number");
-                System.out.println("---------------");
+                System.out.printf("%-27s  |%-28s %n","Name", "Phone Number");
+                System.out.println("----------------------------------------");
                 try {
                     List<String> contactList = Files.readAllLines(dataFile);
                     for (String contact : contactList) {
