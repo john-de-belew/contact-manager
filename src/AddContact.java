@@ -32,7 +32,7 @@ public class AddContact {
                     contactNumber);
             System.out.println(formatContact);
             Files.write(dataFile,
-                    Arrays.asList( formatContact),
+                    Arrays.asList(formatContact),
                     StandardOpenOption.APPEND);
         }catch (Exception e){
             e.fillInStackTrace();

@@ -35,7 +35,7 @@ public class DeleteContact {
                             response.equalsIgnoreCase("yea")|| response.equalsIgnoreCase("sure")
                     || response.equalsIgnoreCase("yeah") || response.equalsIgnoreCase(
                             "affirmative")|| response.equalsIgnoreCase("correct")|| response.equalsIgnoreCase("ok")){
-                        System.out.println("removing "+ line + "?");
+                        System.out.println("removing "+ line);
 
                         continue;
                     }
